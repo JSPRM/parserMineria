@@ -1,4 +1,4 @@
-package com.jsprm.parsermineria.services.parser;
+package com.jsprm.parsermineria.models.entities.parser;
 
 import com.jsprm.parsermineria.exceptions.AtributoNoValido;
 import com.jsprm.parsermineria.exceptions.LineaNoValida;

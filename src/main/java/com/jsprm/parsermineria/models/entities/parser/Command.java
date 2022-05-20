@@ -1,4 +1,4 @@
-package com.jsprm.parsermineria.services.parser;
+package com.jsprm.parsermineria.models.entities.parser;
 
 public interface Command {
     void execute(String linea);

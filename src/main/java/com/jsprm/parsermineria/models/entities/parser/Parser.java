@@ -1,4 +1,4 @@
-package com.jsprm.parsermineria.services.parser;
+package com.jsprm.parsermineria.models.entities.parser;
 
 import com.jsprm.parsermineria.exceptions.LineaNoValida;
 import com.jsprm.parsermineria.services.ClienteService;
@@ -38,6 +38,7 @@ public class Parser {
             this.objetos.add(o);
         }
         catch(Exception e) {
+            e.printStackTrace();
             throw new LineaNoValida("Formato de linea invalido");
         }
     }

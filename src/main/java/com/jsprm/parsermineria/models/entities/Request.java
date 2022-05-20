@@ -46,6 +46,10 @@ public class Request implements Serializable {
     @JsonIgnoreProperties({"request"})
     private List<Path> paths;
 
+    public Request(List<Path> paths) {
+        this.paths = paths;
+    }
+
     @PrePersist
     private void antesPersistir(){
         this.fechaAlta = new Date();

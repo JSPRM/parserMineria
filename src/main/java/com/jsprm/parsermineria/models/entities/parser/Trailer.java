@@ -1,4 +1,4 @@
-package com.jsprm.parsermineria.services.parser;
+package com.jsprm.parsermineria.models.entities.parser;
 
 import com.jsprm.parsermineria.exceptions.AtributoNoValido;
 import com.jsprm.parsermineria.exceptions.LineaNoValida;
@@ -71,7 +71,7 @@ public class Trailer implements Command{
     }
 
     public void validarBasuraFinalLinea(String basuraFinalLinea){
-        if(basuraFinalLinea.matches("^\\s{4}$")){
+        if(basuraFinalLinea.matches("^\\s{12}$")){
             this.basuraFinalLinea = basuraFinalLinea;
         }else{
             throw new LineaNoValida("Linea no valida");

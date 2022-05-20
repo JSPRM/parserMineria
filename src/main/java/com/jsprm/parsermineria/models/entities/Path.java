@@ -36,7 +36,7 @@ public class Path implements Serializable {
     @Column(name = "local_path", nullable = false)
     private String localPath;
 
-    @Column(name = "persiste", nullable = false)
+    @Column(name = "persiste")
     private Boolean persiste;
 
     @Column(name = "detalle")
@@ -45,6 +45,10 @@ public class Path implements Serializable {
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "id_request", referencedColumnName = "id_request", foreignKey = @ForeignKey(name = "FK_REQUEST_ID"))
     private Request request;
+
+    public Path(String localPath) {
+        this.localPath = localPath;
+    }
 
     @Serial
     private static final long serialVersionUID = 6143803810779257328L;
